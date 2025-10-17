@@ -173,25 +173,50 @@ When a **VDS** is applied, the **channel voltage** varies along its length, caus
     
 ✅This results in a **tapered channel** shape from source to drain. 
 
+### Pinch-off Region Condition
+As **VDS** increases, the channel voltage at the drain end can drop to the threshold voltage (VTH), causing the **channel depth at the drain** to become zero.
+- This condition is called **pinch-off**.
+- It occurs when $\boxed { V_{GS} - V_{TH} = V_{DS}} ~~~~ $
+- Beyond this point, the channel **disappears at the drain** and conduction is limited by pinch-off. 
+<img width="840" height="459" alt="image" src="https://github.com/user-attachments/assets/59c74553-c992-4487-94ad-d57c7359c398" />
+<img width="840" height="458" alt="image" src="https://github.com/user-attachments/assets/e50cd4b9-023d-41aa-a377-fa5ffe73e5e5" />
+<img width="840" height="459" alt="image" src="https://github.com/user-attachments/assets/812cda89-8a9d-4e14-a1c0-fc8f4d1e5460" />
+<img width="840" height="466" alt="image" src="https://github.com/user-attachments/assets/5a36b70f-d22f-4d06-b764-aa6126a4b914" />
 
 
+### Drain current Model for Saturation region of operation
+<img width="564" height="374" alt="image" src="https://github.com/user-attachments/assets/c4087c6e-f3b1-4d4e-9db7-82e05fe4ba77" />
+
+- When VDS exceeds
+-   $\boxed {V{DSsat} =  V_{GS} - V_{TH}} ~~~~ $, the MOSFET enters the saturation (pinch-off) region 
+- The channel shape and charge no longer change with further increases in VDS.
+- The drain current (ID) saturates at:
+    $\boxed{i.e., I_{Dsat} = \dfrac{1}{2} {k_n}^\prime \dfrac{W}{L} {\left[ {V_{GS}-V_{TH}}^2\right]}}$
+  
+- Pinch-off does not block current; electrons are accelerated through the depletion region into the drain.
+- Any additional VDS appears across the depletion region, leaving IDsat and VDSsat essentially constant.
+
+<img width="840" height="454" alt="image" src="https://github.com/user-attachments/assets/b8d96b80-b500-418e-81c8-045974e8268b" />
+<img width="840" height="401" alt="image" src="https://github.com/user-attachments/assets/2b900669-028b-423f-a276-9a07828c0981" />
+<img width="840" height="463" alt="image" src="https://github.com/user-attachments/assets/54523ec7-75ac-406f-a733-80b8a3fb5a7d" />
 
 
+### Channel length Modulation and Finite output resistance in Saturation Region
+- In ideal saturation, ​ID is independent of VDS implying finite incremental drain resistance.
+​- In practice, increasing VDS shifts the pinch-off point toward the source, reducing channel length.
+- This Channel Length Modulation (CLM) causes ​ID to increase slightly with VDS
+- The modified drain current is:
 
+ $\boxed{\therefore I_{D} = \dfrac{1}{2} {k_n}^\prime \dfrac{W}{L} \left[ {(V_{GS}-V_{TH}}^2\right] (1 + \lambda V_{DS})}$
 
+​λ is the CLM parameter, dependent on process and channel length.
+- The output resistance becomes finite:
+    $r_o = \dfrac{1}{\lambda I_D}$ 
 
+✅ CLM explains why saturated MOSFETs have slightly rising current and finite output resistance.
 
-
-
-
-
-
-
-
-
-
-
-
+<img width="840" height="453" alt="image" src="https://github.com/user-attachments/assets/41e4c0b3-6985-4257-a405-f186c6dce6a9" />
+<img width="840" height="406" alt="image" src="https://github.com/user-attachments/assets/2f0ee752-5f2a-4b15-a1a6-824e7ebdb39e" />
 
 
 
