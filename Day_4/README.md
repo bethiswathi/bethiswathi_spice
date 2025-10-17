@@ -32,8 +32,60 @@
 <img width="440" height="300" alt="image" src="https://github.com/user-attachments/assets/ade5a76a-c682-4d19-a099-2815d1b351ff" /> 
   <img width="482" height="250" alt="image" src="https://github.com/user-attachments/assets/ab429a68-b163-49e7-9db5-d3abc8461c5b" /> 
 
-  
+```
+  -----------------------
+Output Characteristics:
+-----------------------
+VOL_Min : Minimum output voltage that the logic gate can drive for a logic "0" output.
+VOL_Max : Maximum output voltage that the logic gate will drive corresponding to a logic "0" output.
+VOH_Min : Minimum output voltage that the logic gate will drive corresponding to a logic "1" output.
+VOH_Max : Maximum output voltage that the logic gate can drive for a logic "1" output.
+
+----------------------
+Input Characteristics:
+----------------------
+VIL_Min : The minimum input voltage to the gate corresponding to logic "0" -- is equal to the VSS
+VIL_Max : The maximum input voltage to the gate that will be recognized as logic "0"
+VIH_Min : The minimum input voltage to the gate that will be recognized as logic "1"
+VIH_Max : The maximum input voltage to the gate corresponding to logic "1" -- is equal to the VDD
                                                  
+```
+
+| **Point**                             | **Description**                                                                                                                                    |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Condition for Proper Operation** | For reliable logic operation:  ( V_{OL_MAX} < V_{IL_MAX} ) and ( V_{OH_MIN} > V_{IH_MIN} ).                                                        |
+| **2. Stable Regions**                 | When ( V_{in} \leq V_{IL} ) or ( V_{in} \geq V_{IH} ), the inverter gain magnitude is **less than 1**, so the output is stable.                    |
+| **3. Transition Region**              | For ( V_{IL} < V_{in} < V_{IH} ), the inverter gain magnitude is **greater than 1**, causing a large change in output.                             |
+| **4. Undefined Range**                | The transition region is **undefined** for digital logic — noise in this range can cause incorrect logic transitions.                              |
+| **5. Noise Margin Definitions**       | - **Low-level Noise Margin (NML):** ( NML = V_{IL_MAX} - V_{OL_MAX} )  <br> - **High-level Noise Margin (NMH):** ( NMH = V_{OH_MIN} - V_{IH_MIN} ) |
+| **6. Overall Noise Margin**           | The **effective noise margin** of the circuit is ( NM = \min(NML, NMH) ).                                                                          |
+<img width="840" height="408" alt="image" src="https://github.com/user-attachments/assets/1791423a-7ec6-480f-a628-760702f113b1" />
+<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/aa082aff-b5d8-4cf3-8696-e825c25087ab" />
+<img width="840" height="404" alt="image" src="https://github.com/user-attachments/assets/51e41d64-5555-4e46-8880-1019d9f548a7" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
