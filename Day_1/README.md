@@ -74,7 +74,18 @@ The following image shows a SPICE deck written to perform DC analysis of a NMOS 
 <img width="840" height="379" alt="image" src="https://github.com/user-attachments/assets/496242ee-0a22-4536-8bae-0146fd302b40" />
 <img width="840" height="359" alt="image" src="https://github.com/user-attachments/assets/cdca0073-ad88-4bbf-8ae0-5be02cecc2ce" />
 
+### Effect of Substrate/body bias on Threshold voltage
+- The effect of substrate (body) bias on threshold voltage is known as the body effect.
+- In an NMOS transistor, when the source-to-body voltage (VSB) increases (i.e., the body becomes more negatively biased relative to the source):
+- The source–body junction becomes more reverse-biased.
+- It becomes harder to form the inversion layer (channel).
+- Therefore, a higher gate-to-source voltage (VGS) is needed to turn the transistor on.
 
+👉 Result: The threshold voltage (VT) increases with increasing VSB.
+
+<img width="683" height="255" alt="image" src="https://github.com/user-attachments/assets/2ceaa002-cca6-4fbc-8504-3d4431ed2460" />
+
+👉 In short, Increasing body bias (VSB) → increases threshold voltage → reduces transistor drive current.
 
 
 
