@@ -1,3 +1,16 @@
+# Velocity Saturation and CMOS Inverter VTC
+
+## Velocity Saturation
+**Definition**: At high electric fields, carrier drift velocity stops increasing linearly with the field and reaches a maximum limit called saturation velocity (vsat)
+
+**Cause**: In short-channel MOSFETs, large VDS creates strong electric fields near the drain causing frequent scattering of carriers
+
+**Effect on current**: Drain current no longer follows the quadratic law -- it increases linearly with (VGS-VTH) instead of quadratically
+​
+**Result**: Current saturates earlier, reducing transistor current drive and affecting switching speed.
+
+**Significance**: Velocity saturation is a key short-channel effect and must be included in modern CMOS device models. 
+
 ### Drain current in Resistive/linear Region
 
 $I_D = -v_n(x) * Q_i(x) * W$  
