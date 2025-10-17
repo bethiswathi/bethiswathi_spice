@@ -220,6 +220,10 @@ As **VDS** increases, the channel voltage at the drain end can drop to the thres
 
 
 ### Installation of Ngspice
+Initially update using the following command
+```
+ sudo apt update
+```
 <img width="800" height="409" alt="image" src="https://github.com/user-attachments/assets/0a4ee60e-908b-415a-82cc-727f78460552" />
 <img width="800" height="413" alt="image" src="https://github.com/user-attachments/assets/abc92449-8b39-4337-ac93-9e8eeaeeeff9" />
 
