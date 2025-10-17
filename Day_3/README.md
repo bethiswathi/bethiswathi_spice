@@ -32,6 +32,8 @@ meas dc Vm find V(out) when V(out)=V(in)
 
 .end
 ```
+</details>
+
 **Output**
 
 
@@ -74,6 +76,8 @@ meas tran t_pHL TRIG v(in) VAL=tp_thr RISE=2 TARG v(out) VAL=tp_thr FALL=2
 
 .end
 ```
+</details>
+
 **Output**
 
 
