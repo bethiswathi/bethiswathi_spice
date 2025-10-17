@@ -5,11 +5,13 @@
 
 **Cause**: In short-channel MOSFETs, large VDS creates strong electric fields near the drain causing frequent scattering of carriers
 
-**Effect on current**: Drain current no longer follows the quadratic law -- it increases linearly with (VGS-VTH) instead of quadratically
+**Effect on current**: Whem the electric field along the channel reaches critical value Ec, the velocity of carriers tend to saturate due to scattering effects (collisions suffered by the carriers). Drain current no longer follows the quadratic law -- it increases linearly with (VGS-VTH) instead of quadratically
 ​
 **Result**: Current saturates earlier, reducing transistor current drive and affecting switching speed.
 
 **Significance**: Velocity saturation is a key short-channel effect and must be included in modern CMOS device models. 
+
+<img width="472" height="358" alt="image" src="https://github.com/user-attachments/assets/2e59a2fb-e7c2-43a6-9a79-4cceed861ab7" />
 
 ### Drain current in Resistive/linear Region
 
