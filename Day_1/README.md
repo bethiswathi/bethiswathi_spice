@@ -64,6 +64,15 @@ The following image shows a SPICE deck written to perform DC analysis of a NMOS 
 
 <img width="840" height="465" alt="image" src="https://github.com/user-attachments/assets/594c9fa6-5a2d-4b21-b58e-96602cfcdfaf" />
 
+### NMOS Transistor
+<img width="840" height="385" alt="image" src="https://github.com/user-attachments/assets/65ca76f5-da76-4c9a-bca7-5df172f73f52" />
+<img width="840" height="342" alt="image" src="https://github.com/user-attachments/assets/7868ba03-65c5-49e4-878b-27a157e66d48" />
+<img width="840" height="369" alt="image" src="https://github.com/user-attachments/assets/220ee8e2-8cac-4158-b033-fac4dd4f6d05" />
+<img width="840" height="364" alt="image" src="https://github.com/user-attachments/assets/bf08dd26-3809-40b4-b8fd-ac770e04b0f2" />
+<img width="840" height="367" alt="image" src="https://github.com/user-attachments/assets/b6c08fed-4594-4665-bbe3-59c35fdfa7af" />
+<img width="840" height="352" alt="image" src="https://github.com/user-attachments/assets/5286687d-5322-4f7e-9f2f-bef1154fd1a2" />
+<img width="840" height="379" alt="image" src="https://github.com/user-attachments/assets/496242ee-0a22-4536-8bae-0146fd302b40" />
+<img width="840" height="359" alt="image" src="https://github.com/user-attachments/assets/cdca0073-ad88-4bbf-8ae0-5be02cecc2ce" />
 
 
 
