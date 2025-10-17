@@ -52,11 +52,6 @@ plot deriv(dc1.V(out)) deriv(dc2.V(out)) deriv(dc3.V(out)) deriv(dc4.V(out)) der
 
 
 
-
-
-
-
-
 ## Device Variations
 
 | **Point**                            | **Description**                                                                                                                                               |
@@ -68,6 +63,7 @@ plot deriv(dc1.V(out)) deriv(dc2.V(out)) deriv(dc3.V(out)) deriv(dc4.V(out)) der
 | **5. Types of Variations**           | - **Global variations:** Affect the entire wafer or chip uniformly. <br> - **Local variations:** Affect individual transistors differently (device mismatch). |
 | **6. Design Mitigation**             | Designers use **process corners**, **statistical analysis**, and **layout techniques** (like common-centroid matching) to ensure reliable circuit operation.  |
 
+<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/5c89aef8-1c8d-4262-b2d9-2f3972d061ca" />
 
 
 <details> <summary> SPICE File: day5_inv_devicevariation_wp7_wn042.spice </summary>
