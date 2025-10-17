@@ -27,6 +27,9 @@ Vin in 0 1.8V
 run
 display
 setplot dc1
+display
+meas dc vm find V(out) when V(out)=V(in)
+
 .endc
 
 .end
