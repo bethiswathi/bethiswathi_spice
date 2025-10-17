@@ -34,10 +34,7 @@
 
 👉 In short, the simulator needs the circuit’s structure, device behavior, initial state, inputs, and simulation settings to analyze circuit performance.
 
-| ![CircuitDesignWorkshop_D1_Basic_Spice_Syntax_Ngspice_1](/docs/images/CircuitDesignWorkshop/CircuitDesignWorkshop_D1_Basic_Spice_Syntax_Ngspice_1.png) | ![CircuitDesignWorkshop_D1_Basic_Spice_Syntax_Ngspice_2](/docs/images/CircuitDesignWorkshop/CircuitDesignWorkshop_D1_Basic_Spice_Syntax_Ngspice_2.png) |
-|:---:|:---:| 
-
-**Analysis Types supported by SPICE:**
+## **Analysis Types supported by SPICE:**
 | Analysis Type | Details |
 |:---|:---|
 | DC Analysis | Find the DC operating point of the circuit i.e., all voltages and currents |
@@ -53,11 +50,19 @@ The following image shows a SPICE deck written to perform DC analysis of a NMOS 
 <img width="549" height="369" alt="image" src="https://github.com/user-attachments/assets/c123665b-0da4-4880-980d-f6bc1ff4f82b" />
 <br>
 
+<img width="840" height="436" alt="image" src="https://github.com/user-attachments/assets/e7866dd3-8854-4a9d-9169-16df13cc7ee5" />
 
+<img width="840" height="498" alt="image" src="https://github.com/user-attachments/assets/03e8a19d-8122-47b6-ab5b-dbc70d28df03" />
 
+<img width="840" height="459" alt="image" src="https://github.com/user-attachments/assets/439b4a6f-6e19-467c-9e51-87de8271ac89" />
 
+<img width="840" height="433" alt="image" src="https://github.com/user-attachments/assets/10a687dc-826d-4e5c-83ec-a001559bb2ec" />
 
+<img width="840" height="403" alt="image" src="https://github.com/user-attachments/assets/5b767a94-0036-4542-accd-7a553b354771" />
 
+<img width="840" height="433" alt="image" src="https://github.com/user-attachments/assets/bebc4752-0f5b-4d73-85c5-d227e86329be" />
+
+<img width="840" height="465" alt="image" src="https://github.com/user-attachments/assets/594c9fa6-5a2d-4b21-b58e-96602cfcdfaf" />
 
 
 
