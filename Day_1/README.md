@@ -67,6 +67,13 @@ The following image shows a SPICE deck written to perform DC analysis of a NMOS 
 ### NMOS Transistor
 <img width="840" height="385" alt="image" src="https://github.com/user-attachments/assets/65ca76f5-da76-4c9a-bca7-5df172f73f52" />
 <img width="840" height="342" alt="image" src="https://github.com/user-attachments/assets/7868ba03-65c5-49e4-878b-27a157e66d48" />
+
+### Transistor operation
+- When no gate voltage is applied, the MOSFET is in the cut-off region with no conduction between source and drain.
+- As the gate-to-source voltage (VGS) increases, minority carriers form a conductive channel under the gate.
+- At a specific voltage called the threshold voltage (VT), surface inversion occurs — the minority carrier concentration in the channel equals the majority carrier concentration in the substrate, enabling current flow.
+- When the gate-to-source voltage (VGS) increases several thermal voltages (Φt) beyond the threshold voltage, the MOSFET enters the strong inversion region.
+- In this region, the channel is well-formed, and the minority carrier concentration becomes strongly dependent on the gate voltage, allowing significant current flow.
 <img width="840" height="369" alt="image" src="https://github.com/user-attachments/assets/220ee8e2-8cac-4158-b033-fac4dd4f6d05" />
 <img width="840" height="364" alt="image" src="https://github.com/user-attachments/assets/bf08dd26-3809-40b4-b8fd-ac770e04b0f2" />
 <img width="840" height="367" alt="image" src="https://github.com/user-attachments/assets/b6c08fed-4594-4665-bbe3-59c35fdfa7af" />
@@ -86,6 +93,97 @@ The following image shows a SPICE deck written to perform DC analysis of a NMOS 
 <img width="683" height="255" alt="image" src="https://github.com/user-attachments/assets/2ceaa002-cca6-4fbc-8504-3d4431ed2460" />
 
 👉 In short, Increasing body bias (VSB) → increases threshold voltage → reduces transistor drive current.
+
+<img width="840" height="470" alt="image" src="https://github.com/user-attachments/assets/71aae5af-696a-445a-9a37-7c72c350673b" />
+<img width="840" height="472" alt="image" src="https://github.com/user-attachments/assets/ee53e995-ae2f-4dac-b6d1-7c0bf6e6bad0" />
+<img width="840" height="491" alt="image" src="https://github.com/user-attachments/assets/76881c2e-0edc-4d85-ab37-5099bf4c8e3f" />
+<img width="840" height="411" alt="image" src="https://github.com/user-attachments/assets/bc0473f3-c565-4a93-a04d-fd3bd5aa63e4" />
+<img width="840" height="413" alt="image" src="https://github.com/user-attachments/assets/83a4d7a4-0b2d-4721-9cea-f65e2dea6f49" />
+
+## Resistive/Linear/Triode Region of operation
+Let us analyse the condition when we apply a Gate-Source potential, $V_{GS} >= V_{TH}$ and a small value of $V_{DS}$ is applied across the channel from Drain-to-Source.
+<img width="840" height="471" alt="image" src="https://github.com/user-attachments/assets/cd215709-c368-4e72-b71b-cedc26e768f2" />
+
+## Derivation of Drain-current Equation
+Using a first-order analysis, the drain current (ID) in a MOSFET arises from the drift of charge carriers in the channel, caused by the lateral electric field established by the applied drain-to-source voltage (VDS)
+
+<img width="840" height="426" alt="image" src="https://github.com/user-attachments/assets/a820d21f-b738-4adb-9b5f-e86ce30a80bb" />
+<img width="840" height="466" alt="image" src="https://github.com/user-attachments/assets/b7c0b64c-2d18-4ff7-8e2b-041e6612728c" />
+<img width="840" height="454" alt="image" src="https://github.com/user-attachments/assets/56338dc0-b6bc-476f-84e5-12b91c2f7384" />
+<img width="840" height="511" alt="image" src="https://github.com/user-attachments/assets/802f0dda-1752-4da0-8a52-c377813911ce" />
+<img width="840" height="513" alt="image" src="https://github.com/user-attachments/assets/83cd8597-a80f-43e6-98c2-70023c3ca07d" />
+<img width="840" height="543" alt="image" src="https://github.com/user-attachments/assets/fb9c0a74-7efe-415e-aca4-dae3f9eade4e" />
+<img width="640" height="371" alt="image" src="https://github.com/user-attachments/assets/816764f0-13a9-41d7-ae84-63919698835d" />
+
+  - Let $V_{GS}$ be held constant at a value greater than $V_{TH}$.  
+  - The applied $V_{DS}$ appears as a voltage drop across the length of the channel.  
+  - As we travel along the channel from Source to Drain, the voltage (measured relative to the Source terminal) increases from zero to $V_{DS}$.
+  - Thus the voltage between the gate and points along the channel decreases from $V_{GS}$ at the Source end to $V_{GD} = V_{GS}-V_{DS}$ at the Drain end.
+
+
+  - At a point x along the channel, the voltage is $V(x)$, and the gate-to-channel voltage at that point equals $V_{GS} – V(x)$.
+
+Under the assumption that this voltage exceeds the threshold voltage all along the channel, the induced channel charge per unit area at point x can be computed.
+
+$Q_i(x) = -C_{ox} [V_{GS} - V(x) -V_{TH}]$  
+$where:$  
+$~~~~~~~~ C_{ox} = \dfrac{\epsilon_{ox}}{t_{ox}}$
+
+The current is given as the product of the drift velocity of the carriers, $v_n$ and the
+available charge. Due to charge conservation, it is a constant over the length of the channel.
+W is the width of the channel in a direction perpendicular to the current flow.
+
+$I_D = -v_n(x) * Q_i(x) * W$
+
+The electron velocity is related to the electric field through a parameter called the mobility $\mu_n$ (expressed in $\dfrac{m^2}{V.s}$).  
+
+Drift velocity, $v_n = -\mu_n \dfrac{dV}{dx}$
+
+$\therefore I_D = -\mu_n \dfrac{dV}{dx} * -C_{ox} [V_{GS} - V(x) - V_{TH}] * W$  
+
+$i.e., I_D dx = \mu_n C_{ox} W [V_{GS} - V(x) -V_{TH}] dV$
+
+Integrating the equation over the length of the channel L yields the voltage-current relation of the transistor:  
+$\boxed{I_D = {k_n}^\prime \dfrac{W}{L} \left[ (V_{GS}-V_{TH})V_{DS} - \dfrac{{V_{DS}}^2}{2} \right]
+     = k_n \left[ (V_{GS}-V_{TH})V_{DS} - \dfrac{{V_{DS}}^2}{2} \right]}$
+
+$where:$  
+$~~~~~~~~ {k_n}^\prime$ is the _process transconductance parameter._  
+$~~~~~~~~ {k_n}^\prime = \mu_nC_{ox}$
+
+The product of process transconductance, ${k_n}^\prime$ and the $\dfrac{W}{L}$ ratio of the transistor is called the _gain factor_, $k_n$ of the device.
+
+$~~~~~~~~ k_n = {k_n}^\prime * \left( \dfrac{W}{L} \right)$
+
+Now, the above equation for Drain Current:  
+$I_D = k_n * \left[(V_{GS} - V_{TH}) * V_{DS} - \dfrac{V_{DS}^2}{2}\right]$
+is a quadratic function of $V_{DS}$.  
+
+But at low values, the $\dfrac{V_{DS}^2}{2}$ term can be ignored as it is close to zero. Hence the equation for $I_D$ can be approximated to be a linear function of $V_{DS}$:  
+
+$\boxed {i.e., I_D = k_n * (V_{GS} - V_{TH}) * V_{DS}} ~~~~ $
+_Hence the name Linear Region_
+
+<img width="840" height="521" alt="image" src="https://github.com/user-attachments/assets/2de38ed9-a4b9-42ed-894b-ce708d63cff3" />
+
+## Saturation/Pinch-off region of Operation
+When a **VDS** is applied, the **channel voltage** varies along its length, causing the **channel-depth** to be **non-uniform**.
+  - The channel is **deepest** at the source, proportional to $\boxed { V_{GS} - V_{TH}} ~~~~ $
+  - It is **shallowest** at the drain, proportional to $\boxed { V_{GS} - V_{TH} - V_{DS}} ~~~~ $
+    
+✅This results in a **tapered channel** shape from source to drain. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
