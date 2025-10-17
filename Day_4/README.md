@@ -61,8 +61,52 @@ VIH_Max : The maximum input voltage to the gate corresponding to logic "1" -- is
 | **6. Overall Noise Margin**           | The **effective noise margin** of the circuit is ( NM = \min(NML, NMH) ).                                                                          |
 <img width="840" height="408" alt="image" src="https://github.com/user-attachments/assets/1791423a-7ec6-480f-a628-760702f113b1" />
 <img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/aa082aff-b5d8-4cf3-8696-e825c25087ab" />
+
+### Noise Margin Robustness against variations in Device Ratio
 <img width="840" height="404" alt="image" src="https://github.com/user-attachments/assets/51e41d64-5555-4e46-8880-1019d9f548a7" />
 
+### 17.1.3 Lab: Noise Margin - sky130 Inverter (Wp/Lp=1u/0.15u, Wn/Ln=0.36u/0.15u)
+<details> <summary> SPICE File: day4_inv_noisemargin_wp1_wn036.spice </summary>
+
+```
+*** Model Description ***
+.param temp=27
+
+*** Including sky130 library files ***
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*** Netlist Description ***
+XM1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+XM2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.36 l=0.15
+Cload out 0 50fF
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*** Simulation Commands ***
+.op
+.dc Vin 0 1.8 0.01
+
+.control
+run
+setplot dc1
+display
+let dVout = deriv(V(out))
+meas dc vil find V(in) when dVout=-1 cross=1
+meas dc vih find V(in) when dVout=-1 cross=2
+meas dc voh find V(out) when dVout=-1 cross=1
+meas dc vol find V(out) when dVout=-1 cross=2
+
+let NML = vil - vol
+let NMH = voh - vih
+print NML
+print NMH
+.endc
+
+.end
+```
+</details>
+
+**Output**
 
 
 
