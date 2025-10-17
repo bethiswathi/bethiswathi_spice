@@ -219,6 +219,83 @@ As **VDS** increases, the channel voltage at the drain end can drop to the thres
 <img width="840" height="406" alt="image" src="https://github.com/user-attachments/assets/2f0ee752-5f2a-4b15-a1a6-824e7ebdb39e" />
 
 
+### Installation of Ngspice
+<img width="800" height="409" alt="image" src="https://github.com/user-attachments/assets/0a4ee60e-908b-415a-82cc-727f78460552" />
+<img width="800" height="413" alt="image" src="https://github.com/user-attachments/assets/abc92449-8b39-4337-ac93-9e8eeaeeeff9" />
+
+### Simulation Using Ngspice
+After installing Ngspice, clone the repository
+```
+ https://github.com/kunalg123/sky130CircuitDesignWorkshop.git
+```
+
+
+
+### 14.2.6 Lab: ID vs. VDS for different VGS - sky130 NMOS (W=5um, L=2um)
+<details> <summary> SPICE File: day1_nfet_idvds_L2_W5.spice </summary>
+
+```
+*** Model Description ***
+.param temp=27
+
+*** Including sky130 library files ***
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+*** Netlist Description ***
+XM1 vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=5 l=2
+R1 n1 in 55
+Vdd vdd 0 1.8
+Vin in 0 1.8
+
+*** Simulation Commands ***
+.op
+.dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+.control
+run
+display
+setplot dc1
+.endc
+
+.end
+```
+</details>
+
+**Output**
+
+<img width="840" height="475" alt="image" src="https://github.com/user-attachments/assets/a2cfd192-3092-4caa-98a1-e18992697b3c" />
+<img width="840" height="480" alt="image" src="https://github.com/user-attachments/assets/9a53dfa2-4d27-46da-9530-36a5f8950ff5" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
