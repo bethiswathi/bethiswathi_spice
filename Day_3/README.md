@@ -1,7 +1,7 @@
 ## CMOS Switching Threshold and Dynamic Simulations
 
-## 16.1 CMOS Inverter VTC (contd.)
-### 16.1.1 Lab: CMOS Inverter VTC - sky130 (Wp/Wn = 0.84u/0.36u, L=0.15u)
+## CMOS Inverter VTC (contd.)
+### Lab: CMOS Inverter VTC - sky130 (Wp/Wn = 0.84u/0.36u, L=0.15u)
 
 <details> <summary> SPICE File: day3_inv_vtc_Wp084_Wn036.spice </summary>
 
@@ -35,10 +35,11 @@ meas dc Vm find V(out) when V(out)=V(in)
 </details>
 
 **Output**
+<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/aa6ef732-683c-490e-8c0e-6102e53437d0" />
 
 
 
-### 16.1.2 Lab: CMOS Inverter Transition time - sky130 (Wp/Wn = 0.84u/0.36u, L=0.15u)
+### Lab: CMOS Inverter Transition time - sky130 (Wp/Wn = 0.84u/0.36u, L=0.15u)
 <details> <summary> SPICE File: day3_inv_tran_Wp084_Wn036.spice </summary>
 
 ```
