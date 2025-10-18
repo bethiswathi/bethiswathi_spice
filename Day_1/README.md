@@ -47,8 +47,8 @@
 <br>
 
 ## Process Corners
-- Process Corners refer to the extremes of manufacturing variations in semiconductor fabrication that affect transistor performance.
-- They are used in SPICE simulations and circuit verification to ensure the design works under all possible conditions.
+- Process Corners refer to the **extremes of manufacturing variations** in semiconductor fabrication that affect transistor performance.
+- They are used in **SPICE simulations** and **circuit verification** to ensure the design works under all possible conditions.
 
 | Corner | NMOS    | PMOS    | Meaning              | Behavior                                                         |
 | :----- | :------ | :------ | :------------------- | :--------------------------------------------------------------- |
