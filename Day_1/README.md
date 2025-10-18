@@ -46,6 +46,30 @@
 | Noise Analysis | Measures the device-generated noise for a given circuit. |
 <br>
 
+## Process Corners
+- Process Corners refer to the extremes of manufacturing variations in semiconductor fabrication that affect transistor performance.
+- They are used in SPICE simulations and circuit verification to ensure the design works under all possible conditions.
+
+| Corner | NMOS    | PMOS    | Meaning              | Behavior                                                         |
+| :----- | :------ | :------ | :------------------- | :--------------------------------------------------------------- |
+| **TT** | Typical | Typical | **Typical Corner**   | Both NMOS & PMOS are at *nominal (average)* process values       |
+| **SS** | Slow    | Slow    | **Slow-Slow Corner** | Both transistors are weaker → lower current, slower switching    |
+| **FF** | Fast    | Fast    | **Fast-Fast Corner** | Both transistors are stronger → higher current, faster switching |
+| **FS** | Fast    | Slow    | **Fast-Slow Corner** | NMOS faster than PMOS → logic tends to pull down quickly         |
+| **SF** | Slow    | Fast    | **Slow-Fast Corner** | PMOS faster than NMOS → logic tends to pull up quickly           |
+
+
+| Corner | Mobility (μ)         | Vth     | Delay            | Power    | Use Case            |
+| :----- | :------------------- | :------ | :--------------- | :------- | :------------------ |
+| **TT** | nominal              | nominal | nominal          | nominal  | Normal operation    |
+| **SS** | low                  | high    | slowest          | lowest   | Worst-case timing   |
+| **FF** | high                 | low     | fastest          | highest  | Best-case timing    |
+| **SF** | NMOS slow, PMOS fast | –       | pull-up faster   | moderate | Rise/fall skew test |
+| **FS** | NMOS fast, PMOS slow | –       | pull-down faster | moderate | Rise/fall skew test |
+
+
+
+
 The following image shows a SPICE deck written to perform DC analysis of a NMOS transistor <br><br>
 <img width="549" height="369" alt="image" src="https://github.com/user-attachments/assets/c123665b-0da4-4880-980d-f6bc1ff4f82b" />
 <br>
