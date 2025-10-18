@@ -90,16 +90,6 @@ Vin in 0 1.8V
 run
 setplot dc1
 display
-let dVout = deriv(V(out))
-meas dc vil find V(in) when dVout=-1 cross=1
-meas dc vih find V(in) when dVout=-1 cross=2
-meas dc voh find V(out) when dVout=-1 cross=1
-meas dc vol find V(out) when dVout=-1 cross=2
-
-let NML = vil - vol
-let NMH = voh - vih
-print NML
-print NMH
 .endc
 
 .end
@@ -107,6 +97,7 @@ print NMH
 </details>
 
 **Output**
+<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/2d70bc2c-8910-4ea7-a0e4-6b89ccba56de" />
 
 
 
