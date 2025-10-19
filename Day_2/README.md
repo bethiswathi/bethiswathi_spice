@@ -184,6 +184,7 @@ setplot dc1
 </details>
 
 **Output**
+<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/a991dd9d-582c-407d-906e-78a8418e61c9" />
 
 
 
@@ -218,6 +219,8 @@ setplot dc1
 </details>
 
 **Output**
+<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/7255d8c5-5593-4aee-a47c-ef18447cafb9" />
+
 
 ### CMOS Inverter Characteristics
 
