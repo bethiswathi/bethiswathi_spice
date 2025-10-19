@@ -36,6 +36,11 @@ display
 **Output**
 <img width="840" height="500" alt="image" src="https://github.com/user-attachments/assets/8186ebdb-d107-47f4-affe-63251eaa5a56" />
 
+Noise Margins can be calculated as below
+![20251019_100539](https://github.com/user-attachments/assets/04caf7e1-664f-41e3-a864-cef71807edbb)
+![20251019_100622](https://github.com/user-attachments/assets/c1a0caa8-7d28-433c-961d-e6f83c051180)
+From the snapshot we can calculate NMH =VOH - VIH = 1.7324 - 0.983 =0.7494
+                           and   NML = VIL - VOL = 0.745 - 0.1142 = 0.6308
 
 
 
