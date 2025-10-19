@@ -72,6 +72,16 @@ run
 **Output**
 <img width="840" height="500" alt="image" src="https://github.com/user-attachments/assets/c0b754a7-c146-46fb-afad-04b718af6576" />
 
+We can calculate rise delay like as shown below by taking the values of x and y at both points 
+![20251019_093646](https://github.com/user-attachments/assets/4aceeffb-8bbb-4571-b5ad-5b70f1896b5a)
+![20251019_093721](https://github.com/user-attachments/assets/8d501134-669f-4471-80df-8e27925a5a54)
+The rise delay value from the above snapshot = 2.475-0.341 = 2.134
+
+Fall time can be calculated as below
+![20251019_094156](https://github.com/user-attachments/assets/611cf103-c08b-4bd7-a61f-a72ebd4fab41)
+![20251019_094223](https://github.com/user-attachments/assets/cbae5005-33f4-4256-930a-048f7302a98a)
+From the above snapshots we can calculate fall delay =4.338-4.013 = 0.325
+
 
 ## Evaluating the Robustness of CMOS Inverrter
 The switching threshold, $V_M$, is defined as the point where $V_{in} = V_{out}$.
