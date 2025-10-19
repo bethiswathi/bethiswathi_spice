@@ -93,66 +93,8 @@ $V_{TO}, ~ \gamma, ~ V_{DSAT}, ~ k^{\prime}, ~ and ~ \lambda$.
 ✅ It captures the essential electrical behavior of the MOSFET while remaining analytically manageable for circuit design and analysis.
 
 
-### 15.1.4 Lab: Velocity Saturation - ID vs. VDS - tsmc 0.25um
-<details> <summary> SPICE File: nmos_chara_W1.8u_L1.2u.spice </summary>
 
-```
-*** Netlist Description ***
-M1 vdd n1 0 0 nmos W=1.8u L=1.2u
-R1 in n1 55
-Vdd vdd 0 2.5
-Vin in 0 2.5
-
-*** .include model ***
-.lib "tsmc_025um_model.mod" cmos_models
-
-*** Simulation Commands ***
-.op
-.dc Vdd 0 2.5 0.1 Vin 0 2.5 0.5
-
-.control
-run
-display
-setplot dc1
-plot -vdd#branch
-.endc
-
-.end
-```
-</details>
-
-<details> <summary> SPICE File: nmos_chara_W0.375u_L0.25u.spice </summary>
-
-```
-*** Netlist Description ***
-M1 vdd n1 0 0 nmos W=0.375u L=0.25u
-R1 in n1 55
-Vdd vdd 0 2.5
-Vin in 0 2.5
-
-*** .include model ***
-.lib "tsmc_025um_model.mod" cmos_models
-
-*** Simulation Commands ***
-.op
-.dc Vdd 0 2.5 0.1 Vin 0 2.5 0.5
-
-.control
-run
-display
-setplot dc1
-plot -vdd#branch
-.endc
-
-.end
-```
-</details>
-
-**Output**
-
-
-
-### 15.1.5 Lab: Velocity Saturation - sky130 (W=0.39um, L=0.15um)
+### Lab: Velocity Saturation - sky130 (W=0.39um, L=0.15um)
 <details> <summary> SPICE File: day2_nfet_idvds_L015_W039.spice </summary>
 
 ```
@@ -188,7 +130,7 @@ setplot dc1
 
 
 
-### 15.1.6 Lab: Velocity Saturation - ID$ vs. VGS - sky130 NMOS (5u/2u vs. 0.39u/0.15u)
+### Lab: Velocity Saturation - ID$ vs. VGS - sky130 NMOS (5u/2u vs. 0.39u/0.15u)
 <details> <summary> SPICE File: day2_nfet_idvgs_L015_W039.spice </summary>
 
 ```
@@ -223,6 +165,25 @@ setplot dc1
 
 
 ### CMOS Inverter Characteristics
+
+**Relationships between voltages for the three regions of operation of PMOS, NMOS in a CMOS inverter:**  
+| | Cutoff | Linear | Saturation |
+|:---|:---|:---|:---|
+| **NMOS** | $V_{GSn} < V_{Tn}$ <br>  $V_{in} < V_{Tn}$ <br>  <br>  <br>  <br>  | $V_{GSn} > V_{Tn}$ <br>  $V_{in} > V_{Tn}$ <br>  <br>  $V_{DSn} < (V_{GSn}-V_{Tn})$ <br>  $V_{out} < (V_{in}-V_{Tn})$ | $V_{GSn} > V_{Tn}$ <br>  $V_{in} > V_{Tn}$ <br>  <br>  $V_{DSn} > (V_{GSn}-V_{Tn})$ <br>  $V_{out} > (V_{in}-V_{Tn})$ |
+| **PMOS** | $V_{GSp} > V_{Tp}$ <br>  $V_{in} > V_{DD} - \mid V_{Tp} \mid$ <br>  <br>  <br>  <br>  | $V_{GSp} < V_{Tp}$ <br>  $V_{in} < V_{DD}-\mid V_{Tp} \mid$ <br>  <br>  $V_{DSp} > (V_{GSp}-V_{Tp})$ <br>  $V_{out} > (V_{in}+\mid V_{Tp} \mid)$ | $V_{GSp} < V_{Tp}$ <br>  $V_{in} < V_{DD}-\mid V_{Tp} \mid$ <br>  <br>  $V_{DSp} < (V_{GSp}-V_{Tp})$ <br>  $V_{out} < (V_{in}+\mid V_{Tp} \mid)$ |
+
+_**Note:**_ $V_{Tp}$ is negative.  
+
+
+| Region| Condition | PMOS | NMOS | Output |
+|:---:|:---|:---|:---|:---|
+| A | $0 \le V_{in} < V_{Tn}$ | Linear | Cutoff | $V_{out} = V_{DD}$ |
+| B | $V_{Tn} \le V_{in} < (V_{DD}/2)$ | Linear | Saturation | $V_{out} > V_{DD}/2$ |
+| C | $Vin = V_{DD}/2$ | Saturation | Saturation | $V_{out}$ drops sharply |
+| D | $(V_{DD}/2) < V_{in} \le V_{DD}-\mid V_{Tp} \mid$ | Saturation | Linear | $V_{out} < V_{DD}/2$ |
+| E | $V_{in} > V_{DD}-\mid V_{Tp} \mid$ | Cutoff | Linear | $V_{out} = 0$ |
+
+<img width="840" height="353" alt="image" src="https://github.com/user-attachments/assets/bc0cb8b9-18a9-471d-ae4c-ac50fb1d0811" />
 
 
 
