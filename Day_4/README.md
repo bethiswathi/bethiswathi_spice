@@ -97,7 +97,8 @@ display
 </details>
 
 **Output**
-<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/2d70bc2c-8910-4ea7-a0e4-6b89ccba56de" />
+<img width="840" height="500" alt="image" src="https://github.com/user-attachments/assets/46ea5278-3e79-48d7-b338-78b6e9ebc174" />
+
 
 
 
