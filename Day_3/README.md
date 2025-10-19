@@ -27,7 +27,6 @@ Vin in 0 1.8V
 run
 setplot dc1
 display
-meas dc Vm find V(out) when V(out)=V(in)
 .endc
 
 .end
@@ -35,7 +34,8 @@ meas dc Vm find V(out) when V(out)=V(in)
 </details>
 
 **Output**
-<img width="840" height="400" alt="image" src="https://github.com/user-attachments/assets/aa6ef732-683c-490e-8c0e-6102e53437d0" />
+<img width="840" height="500" alt="image" src="https://github.com/user-attachments/assets/8186ebdb-d107-47f4-affe-63251eaa5a56" />
+
 
 
 
@@ -62,17 +62,7 @@ Vin in 0 PULSE(0V 1.8V 0 0.1ns 0.1ns 2ns 4ns)
 .control
 run
 
-let vdd=1.8
-let slew_low_rise_thr=0.2*vdd
-let slew_high_rise_thr=0.8*vdd
-let slew_high_fall_thr=0.8*vdd
-let slew_low_fall_thr=0.2*vdd
-let tp_thr=0.5*vdd
 
-meas tran t_rise TRIG v(out) VAL=slew_low_rise_thr RISE=1 TARG v(out) VAL=slew_high_rise_thr RISE=1
-meas tran t_fall TRIG v(out) VAL=slew_high_fall_thr FALL=1 TARG v(out) VAL=slew_low_fall_thr FALL=1
-meas tran t_pLH TRIG v(in) VAL=tp_thr FALL=2 TARG v(out) VAL=tp_thr RISE=2
-meas tran t_pHL TRIG v(in) VAL=tp_thr RISE=2 TARG v(out) VAL=tp_thr FALL=2
 .endc
 
 .end
@@ -80,6 +70,7 @@ meas tran t_pHL TRIG v(in) VAL=tp_thr RISE=2 TARG v(out) VAL=tp_thr FALL=2
 </details>
 
 **Output**
+<img width="840" height="500" alt="image" src="https://github.com/user-attachments/assets/c0b754a7-c146-46fb-afad-04b718af6576" />
 
 
 ## Evaluating the Robustness of CMOS Inverrter
