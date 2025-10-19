@@ -98,6 +98,8 @@ display
 
 **Output**
 <img width="840" height="500" alt="image" src="https://github.com/user-attachments/assets/46ea5278-3e79-48d7-b338-78b6e9ebc174" />
+![20251019_100539](https://github.com/user-attachments/assets/d5d7e2b9-5639-4706-ac46-bcd6311081f2)
+![20251019_100622](https://github.com/user-attachments/assets/6c7c664c-ed3d-4242-ba96-d44b942f36f8)
 
 
 
